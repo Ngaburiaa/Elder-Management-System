@@ -1,0 +1,279 @@
+
+/* Header Container */
+body,html{
+  justify-content: center;
+  align-items: center;
+  
+    margin: 20;
+    padding: 20;
+   
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+  
+}
+
+.headerMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: linear-gradient(145deg, #fdfdfd 0%, #e8ecef 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08),
+              inset 0 0 15px rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.menu-icon .icon {
+  font-size: clamp(24px, 4vw, 28px);
+  color: #5a3f9b;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-icon .icon:hover {
+  color: #46327d;
+  transform: scale(1.1);
+}
+
+
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-left .icon {
+  font-size: clamp(20px, 3vw, 24px);
+  color: #5a3f9b;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-left .icon:hover {
+  color: #46327d;
+  transform: scale(1.1);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 8px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05),
+              inset 0 2px 5px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(235, 235, 235, 0.5);
+  animation: expandSearch 0.4s ease-in-out;
+}
+
+@keyframes expandSearch {
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+
+.search-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  font-size: clamp(14px, 2.5vw, 16px);
+  color: #1a1a2e;
+  outline: none;
+}
+
+.search-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-form .icon {
+  font-size: clamp(18px, 3vw, 22px);
+  color: #5a3f9b;
+  transition: color 0.3s ease;
+}
+
+.search-form button:hover .icon {
+  color: #46327d;
+}
+
+/* Header Right (Icons and Dropdowns) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-right .relative {
+  position: relative;
+}
+
+.header-right .icon {
+  font-size: clamp(22px, 3.5vw, 26px);
+  color: #5a3f9b;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-right .icon:hover {
+  color: #46327d;
+  transform: scale(1.1);
+}
+
+/* Badge for Unread Items */
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #d63031;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+              inset 0 0 10px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  width: 250px;
+  padding: 15px;
+  z-index: 1000;
+  animation: dropdownFade 0.3s ease-in-out;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown h3 {
+  color: #1a1a2e;
+  font-size: clamp(16px, 3vw, 18px);
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #5a3f9b;
+  padding-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.notification-item,
+.message-item,
+.profile-item {
+  padding: 10px;
+  color: #4a4a66;
+  font-size: clamp(14px, 2.5vw, 16px);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+}
+
+.notification-item:hover,
+.message-item:hover,
+.profile-item:hover {
+  background: rgba(90, 63, 155, 0.1);
+  color: #5a3f9b;
+}
+
+.unread {
+  background: rgba(214, 48, 49, 0.1);
+  font-weight: 600;
+}
+
+.unread:hover {
+  background: rgba(214, 48, 49, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .headerMain {
+    padding: 10px 20px;
+  }
+
+  .header-right {
+    gap: 20px;
+  }
+
+  .search-form {
+    max-width: 300px;
+  }
+
+  .dropdown {
+    width: 200px;
+    top: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerMain {
+    padding: 8px 15px;
+    flex-wrap: wrap;
+  }
+
+  .header-left {
+    order: 2;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-form {
+    max-width: 100%;
+    padding: 6px 10px;
+  }
+
+  .header-right {
+    gap: 15px;
+  }
+
+  .header-right .icon {
+    font-size: clamp(20px, 3.5vw, 24px);
+  }
+
+  .dropdown {
+    width: 180px;
+    top: 30px;
+    padding: 10px;
+  }
+
+  .notification-item,
+  .message-item,
+  .profile-item {
+    padding: 8px;
+  }
+
+  .badge {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+}
+
+

@@ -1,0 +1,102 @@
+.payment-form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.payment-form-overlay h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.payment-form-overlay .form-group {
+  margin-bottom: 15px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.payment-form-overlay label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.payment-form-overlay input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.payment-form-overlay .immutable-input {
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.payment-buttons {
+  display: flex;
+  gap: 10px; /* Reduced gap to prevent overflow */
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: nowrap; /* Prevent wrapping to keep buttons in one line */
+  width: 80%;
+  max-width: 300px;
+}
+
+.payment-form-overlay button {
+  padding: 5px 5px; 
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem; 
+  cursor: pointer;
+  transition: background 0.3s;
+  flex: 1; 
+  max-width: 140px; 
+  box-sizing: border-box;
+}
+
+.pay-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.pay-btn:hover {
+  background: #27ae60;
+}
+
+.pay-btn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.close-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.close-btn:hover {
+  background: #c0392b;
+}
+
+.message {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+  max-width: 80%;
+}
