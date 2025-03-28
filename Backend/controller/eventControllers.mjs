@@ -85,24 +85,7 @@ async function postUser(req, res) {
       relationship,
       contactPhone,
     } = req.body;
-    // console.log(req.body);
-
-    // if (
-    //   !userName ||
-    //   !password ||
-    //   !email ||
-    //   !fullName ||
-    //   !physicianInfo||
-    //   !gender ||
-    //   !Age||
-    //   !phone ||
-    //   !contactName ||
-    //   !relationship ||
-    //   !contactPhone
-    // ) {
-    //   return res.status(400).send({ error: "Missing required fields" });
-    // }
-
+   
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await prisma.userInfo.create({

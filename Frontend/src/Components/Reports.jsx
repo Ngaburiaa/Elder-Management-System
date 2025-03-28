@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import ReportGenerator from './ReportGenerator';
 import './report.css';
