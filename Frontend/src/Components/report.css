@@ -1,15 +1,17 @@
 .report-generator {
-    padding: 20px;
+  padding: 2.5rem 1.5rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 20px 0;
+    margin:  0 auto;
+    max-width: 1200px;
   }
   
   .report-controls {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    
   }
   
   .report-controls select,

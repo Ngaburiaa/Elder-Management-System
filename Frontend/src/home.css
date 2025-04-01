@@ -1,11 +1,11 @@
 /* ================ Base Styles ================ */
 :root {
-    --primary: #2A5C82; /* Deep ocean blue */
-    --secondary: #5BA4E6; /* Soft sky blue */
-    --accent: #FF6B6B; /* Warm coral */
-    --dark: #2C3E50; /* Midnight slate */
-    --light: #F9FAFB; /* Crisp off-white */
-    --gold: #D4A017; /* Subtle gold accent */
+    --primary: #2A5C82; 
+    --secondary: #5BA4E6; 
+    --accent: #FF6B6B;
+    --dark: #2C3E50; 
+    --light: #F9FAFB; 
+    --gold: #D4A017; 
     --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 70%, var(--gold) 100%);
     --shadow: 0 10px 40px rgba(42, 92, 130, 0.2);
   }

@@ -19,14 +19,16 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           <Link to="/Dashboard/billing"><BsIcons.BsCreditCard2Front className='icon' /> Billing</Link>
         </li>
         <li className='sidebar-list-item'>
-          <Link to="/Dashboard/CareGiverActivities"><BsIcons.BsPeopleFill className='icon' /> Care Giver Activities</Link>
+          <Link to="/Dashboard/CareGiverActivities"><BsIcons.BsPeopleFill className='icon' /> Care-Givers</Link>
+        </li>
+
+        <li className='sidebar-list-item'>
+          <Link to="/Dashboard/Report"><BsIcons.BsMenuButtonWideFill className='icon' /> Report</Link>
         </li>
         <li className='sidebar-list-item'>
           <Link to="/Dashboard/inventory"><BsIcons.BsListCheck className='icon' /> Inventory</Link>
         </li>
-        <li className='sidebar-list-item'>
-          <Link to="/Dashboard/Report"><BsIcons.BsMenuButtonWideFill className='icon' /> Report</Link>
-        </li>
+      
         <li className='sidebar-list-item'>
           <Link to="/Dashboard/settings"><BsIcons.BsFillGearFill className='icon' /> Setting</Link>
         </li>

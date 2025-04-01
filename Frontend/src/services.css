@@ -3,10 +3,11 @@
   
   /* Services Container */
   .services-container {
-    padding: 0 20px;
-    max-width: 1400px;
+    padding:  20px;
+    max-width: 1200px;
     margin: 0 auto;
-  }
+  
+      }
   
   /* Services Header */
   .services-header {
